@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>WDD 131 – Dynamic Web Fundamentals – Lilian Anyanwu</title>
+
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals | Lilian Anyanwu | Course landing page with links, resources, and dynamic dates." />
+    <meta name="author" content="Lilian Anyanwu" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <!-- Defer so the HTML parses before JS runs -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+                        target="_blank" rel="noopener">Favorite Scripture</a></li>
+                <li><a href="./final-project/">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Lilian Anyanwu</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/pics.jpg" alt="Portrait of Lilian" width="640" height="426" />
+            <p>
+                I’m a Software Development student (BYU-Idaho / Pathway) and Care Support Administrator in London.
+                I enjoy building clean, accessible web pages and learning modern JavaScript.
+                This page will collect weekly work, resources, and my final project.
+            </p>
+            <ul class="bullets">
+                <li>Location: London, United Kingdom</li>
+                <li>Interests: Frontend, accessibility, church media</li>
+                <li>Goal: Ship a polished final project by Week 7</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <img src="images/project.jpg" alt="Thumbnail of a web project" width="640" height="426" />
+            <p>
+                Helpful links I revisit often for HTML semantics, CSS layout, and JS:
+            </p>
+            <ul class="links">
+                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                <li><a href="https://web.dev/learn/" target="_blank" rel="noopener">web.dev Learn</a></li>
+                <li><a href="https://contrast-ratio.com/" target="_blank" rel="noopener">Contrast Checker</a></li>
+                <li><a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> • Lilian Anyanwu • United Kingdom
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
