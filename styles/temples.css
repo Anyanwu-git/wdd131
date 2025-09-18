@@ -97,7 +97,7 @@ body {
     color: #1d4ed8;
 }
 
-/* Main container */
+
 main {
     max-width: 62rem;
     /* limited width, centered */
@@ -117,6 +117,12 @@ h1 {
         display: block;
         height: auto;
     }
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
 
 figure {
     margin: 0;
@@ -140,11 +146,34 @@ figcaption {
     font-weight: 600;
 }
 
-/* Footer */
 footer {
     border-top: 1px solid #e5e7eb;
     color: var(--muted);
     padding: 1.25rem 1rem 2rem;
     text-align: center;
     background: #fff;
+}
+
+@media (min-width: 48rem) {
+    .menu {
+        display: none;
+    }
+
+    .nav {
+        position: static;
+    }
+
+    .nav ul {
+        display: flex !important;
+        flex-direction: row;
+        gap: .75rem;
+        background: transparent;
+        border: none;
+        position: static;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
 }
