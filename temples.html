@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temple Album | WDD 131</title>
+<meta name="description"
+    content="Temple Album — a responsive gallery of temple photographs with captions, accessible navigation, and lightweight performance-focused design.">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 48rem)">
+
+ 
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <button id="menu" class="menu" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Open menu">☰</button>
+            <span class="title">Temple Album</span>
+        </div>
+
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Album</h1>
+
+        <!-- Tip: use a single placeholder image duplicated; replace with your own later -->
+        <section class="gallery" id="gallery">
+            <!-- Each figure -->
+            <figure>
+                <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple"
+                 width="640" height="426" 
+                 fetchpriority="high"  decoding="async">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Rome-temple.jpg" alt="Rome Italy Temple exterior" 
+                   width="640" height="426" decoding="async">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/paris-temple.jpg" alt="Paris France Temple exterior"
+                   width="640" height="426" decoding="async">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Ghana-Temple.jpg" alt="Accra Ghana Temple exterior" 
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Aba-temple.jpg" alt="Aba Nigeria Temple exterior" 
+                 width="640" height="426" decoding="async">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Preston_England_Temple.jpg" alt="Preston England Temple exterior" 
+                <figcaption>Preston England Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Laie-Hawaii-temple.jpg" alt="Laie Hawaii Temple exterior" 
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Ukraine-temple.jpg" alt="Kyiv Ukraine Temple exterior"
+                <figcaption>Kyiv Ukraine Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/provo-temple.jpg" alt="Provo City Center Temple exterior" 
+                    width="640" height="426" decoding="async">
+                <figcaption>Provo City Center Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Lilian Anyanwu</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
