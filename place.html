@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nigeria — Country Page</title>
+  <meta name="description" content="WDD 131 • Nigeria: highlights, weather, and quick facts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/place.css">
+  <script src="./scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#"><span class="flag" aria-hidden="true">🇳🇬</span> <span>Nigeria</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#facts">Facts</a>
+        <a href="#weather">Weather</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" id="about">
+      <picture>
+        <source type="image/webp" srcset="
+            ./assets/nigeria-800.webp 800w,
+            ./assets/nigeria-1200.webp 1200w,
+            ./assets/nigeria-1600.webp 1600w" sizes="100vw">
+        <img src="./assets/nigeria-800.webp" alt="Lekki–Ikoyi Bridge at sunset, Lagos, Nigeria" width="1600" height="900"
+          loading="eager">
+      </picture>
+      <div class="hero-text">
+        <h1>Visit <span class="accent">Nigeria</span></h1>
+        <p class="sub">From Zuma Rock to Lagos Lagoon—culture, cuisine, and nature in West Africa.</p>
+      </div>
+    </section>
+
+    
+    <section class="grid">
+      <article class="facts card" id="facts" aria-labelledby="facts-title">
+        <h2 id="facts-title">Quick Facts</h2>
+        <ul class="fact-list">
+          <li><strong>Capital:</strong> <span>Abuja</span></li>
+          <li><strong>Region:</strong> <span>West Africa</span></li>
+          <li><strong>Population:</strong> <span>~ 223 million</span></li>
+          <li><strong>Languages:</strong> <span>English (official); Hausa, Yoruba, Igbo &amp; 500+ others</span></li>
+          <li><strong>Currency:</strong> <span>Nigerian naira (₦, NGN)</span></li>
+          <li><strong>Time Zone:</strong> <span>WAT (UTC+01:00)</span></li>
+        </ul>
+      </article>
+
+      <aside class="weather card" id="weather" aria-labelledby="weather-title">
+        <h2 id="weather-title">Weather</h2>
+        <!-- Mobile view: SVG icon image -->
+        <img class="weather-icon" src="./assets/weather-sun-cloud.svg" alt="Partly cloudy" width="64" height="64" />
+        <div class="wx-grid">
+          <p><strong>Location:</strong> <span id="wx-loc">Jos Plateau</span></p>
+          <p><strong>Condition:</strong> <span id="wx-cond">Breezy &amp; cool</span></p>
+          <p><strong>Temperature:</strong> <span id="wx-temp">9</span> <span class="unit temp-unit">°C</span></p>
+          <p><strong>Wind:</strong> <span id="wx-wind">12</span> <span class="unit wind-unit">km/h</span></p>
+          <p><strong>Wind Chill:</strong> <span id="wx-chill">—</span> <span class="unit temp-unit">°C</span></p>
+        </div>
+        <p class="note">* Wind chill shows only when conditions are viable (≤10&nbsp;°C and &gt;4.8&nbsp;km/h).</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> • Nigeria • WDD 131</p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

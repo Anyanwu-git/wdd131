@@ -1,0 +1,109 @@
+:root{
+  /* Nigeria palette */
+  --bg: #031a0b;          /* deep green-black */
+  --surface: #072d14;     /* dark green */
+  --card: #062412;        /* card green */
+  --text: #e6f9ee;        /* mint-tinted white */
+  --muted: #b3dbc6;       /* muted mint */
+  --accent: #008751;      /* Nigeria flag green */
+  --accent-2: #fbbf24;    /* warm gold for highlights */
+  --shadow: 0 10px 25px rgba(0,0,0,.35);
+  --radius: 1.25rem;
+  --space: clamp(0.8rem, 1.1vw, 1.2rem);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg), #05170d 40%);
+}
+
+/* Header */
+.site-header{
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(5, 23, 13, .75);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.site-header .wrap{
+  max-width: 1100px; margin: 0 auto; padding: .75rem var(--space);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand{ display:flex; align-items:center; gap:.6rem; font-weight:700; color:var(--text); text-decoration:none; }
+.brand .flag{ filter: drop-shadow(0 1px 0 rgba(0,0,0,.6)); }
+.site-nav a{
+  color: var(--muted); margin-left: 1rem; text-decoration: none; font-weight: 600;
+}
+.site-nav a:hover{ color: var(--text); }
+
+/* Hero */
+.hero{
+  position: relative;
+  min-height: 46vh;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.hero picture, .hero img{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.45));
+  object-fit: cover;
+    object-position: center 35%;
+}
+.hero-text{
+  position: relative; text-align: center; padding: 2.5rem var(--space);
+  z-index: 1;
+}
+.hero h1{ font-size: clamp(1.8rem, 5vw, 3rem); margin: 0; letter-spacing: .5px; }
+.hero .accent{ color: var(--accent); text-shadow: 0 2px 20px rgba(0,135,81,.35); }
+.hero .sub{ margin-top: .5rem; color: var(--muted); font-weight: 600; }
+
+/* Content grid */
+.grid{
+  max-width: 1100px; margin: 0 auto; padding: 1.5rem var(--space) 3rem;
+  display: grid; gap: var(--space);
+}
+.card{
+  background: radial-gradient(1200px 400px at 10% -10%, rgba(0,135,81,.08), transparent 40%), var(--card);
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.facts h2, .weather h2{
+  display: inline-flex; align-items: center; gap: .5rem; margin: 0 0 .75rem 0;
+}
+.fact-list{ margin: 0; padding-left: 1rem; display: grid; gap: .4rem; }
+.fact-list strong{ color: var(--accent-2); }
+
+.weather .weather-icon{ width: 56px; height: 56px; display: inline-block; margin-bottom: .5rem; }
+.wx-grid{ display: grid; gap: .25rem; }
+.wx-grid p{ margin: 0; }
+.note{ margin-top: .75rem; color: var(--muted); font-size: .9rem; }
+
+/* Footer */
+.site-footer .wrap{
+  max-width: 1100px; margin: 0 auto; padding: 2rem var(--space); color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: .75rem; justify-content: space-between; align-items: baseline;
+}
+
+/* --- Responsive layout --- */
+@media (min-width: 760px){
+  .grid{ grid-template-columns: 1fr 1fr; }
+  .weather .weather-icon{ display: none; }  /* hide SVG icon on wide view */
+
+  /* Pseudo-element icon after "Weather" heading in wider view */
+  .weather h2::after{
+    content: " ⛅";
+    font-size: 1.1em;
+    line-height: 1;
+    margin-left: .25rem;
+  }
+}
