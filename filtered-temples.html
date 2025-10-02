@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temple Album | WDD 131</title>
+    <meta name="description"
+        content="Temple Album — a responsive gallery of temple photographs with captions, accessible navigation, and lightweight performance-focused design.">
+    <meta name="author" content="Lilian Anyanwu">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 48rem)">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="title">Temple Album</h1>
+        <nav class="nav" aria-label="Temple Filters">
+            <ul>
+                <!-- Home = show all -->
+                <li><button type="button" data-filter="all" class="active" aria-pressed="true">Home</button></li>
+                <li><button type="button" data-filter="old" aria-pressed="false">Old</button></li>
+                <li><button type="button" data-filter="new" aria-pressed="false">New</button></li>
+                <li><button type="button" data-filter="large" aria-pressed="false">Large</button></li>
+                <li><button type="button" data-filter="small" aria-pressed="false">Small</button></li>
+            </ul>
+            </nav>
+    </header>
+
+    <main id="main">
+        <h2 class="visually-hidden">Temple Cards</h2>
+        <!-- JS will inject the cards here -->
+        <section id="gallery" class="gallery" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> • <strong>Lilian Anyanwu</strong></p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
