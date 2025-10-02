@@ -65,7 +65,7 @@ body {
     border: 1px solid var(--border);
     padding: .45rem .8rem;
     border-radius: .65rem;
-    font-weight: 600 .95rem/1.1  "Inter", system-ui, sans-serif;
+    font: 600 .95rem/1.1  "Inter", system-ui, sans-serif;
     cursor:pointer;
 }
 
@@ -77,6 +77,7 @@ body {
     background: var(--brand);
     color: #061224;
     border-color: var(--brand);
+}
 
     .nav a:focus-visible,
     .card a:focus-visible {
