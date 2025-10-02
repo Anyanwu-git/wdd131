@@ -57,7 +57,7 @@ body {
     flex-wrap: wrap;
 }
 
-.nav button {
+.nav a {
     display: inline-block;
     text-decoration: none;
     color: #ffffff;
@@ -73,16 +73,15 @@ body {
     border-color: var(--brand);
 }
 
-.nav button.active {
+.nav a.active {
     background: var(--brand);
     color: #061224;
     border-color: var(--brand);
 
-    .nav button:focus-visible,
-        .card a:focus-visible {
-            outline: 3px solid #ffd166;
-            /* high-contrast focus ring */
-            outline-offset: 2px;
+    .nav a:focus-visible,
+    .card a:focus-visible {
+        outline: 3px solid #ffd166;
+         outline-offset: 2px;
 }
 
 .gallery {

@@ -144,19 +144,23 @@ function applyFilter(type) {
     render(list);
 }
 
-// Filter buttons
-var filterControls = document.querySelectorAll('button[data-filter]');
-filterControls.forEach(function (btn) {
-    btn.addEventListener('click', function () {
+// Filter links (anchors)
+var filterControls = document.querySelectorAll('a[data-filter]');
+filterControls.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // stay on page
+
         filterControls.forEach(function (x) {
             x.classList.remove('active');
-            x.setAttribute('aria-pressed', 'false');
+            x.removeAttribute('aria-current');
         });
-        btn.classList.add('active');
-        btn.setAttribute('aria-pressed', 'true');
-        applyFilter(btn.dataset.filter);
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+
+        applyFilter(link.dataset.filter);
     });
 });
+
 
 // Footer
 (function () {
