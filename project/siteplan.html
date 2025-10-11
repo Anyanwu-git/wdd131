@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site Plan – Smart Bites (WDD 131)</title>
+    <meta name="description"
+        content="Website planning document with purpose, scenarios, color scheme, typography, and wireframes." />
+    <meta name="author" content="Lilian Anyanwu" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo" aria-hidden="true">SB</div>
+            <div>
+                <h1 class="title">Smart Bites</h1>
+                <p class="tagline">Simple Family Nutrition</p>
+            </div>
+        </div>
+        <p class="note">This document is a living website plan. Update it as the project evolves.</p>
+    </header>
+
+    <main class="container" id="content">
+
+        <!-- Site Name -->
+        <section aria-labelledby="site-name">
+            <h2 id="site-name">Site Name</h2>
+            <p><strong>Smart Bites</strong> – a friendly, practical hub for simple, budget-minded family nutrition.</p>
+            <ul class="bullets">
+                <li><strong>Why this name?</strong> It signals quick, “smart” choices and bite-sized learning.</li>
+                <li><strong>Optional domain:</strong> <em>smartbiteshub.com</em> (availability not required for class).
+                </li>
+                <!-- 🔧 TODO: Replace with your own site name/domain idea if you prefer -->
+            </ul>
+        </section>
+
+        <!-- Site Purpose -->
+        <section aria-labelledby="purpose">
+            <h2 id="purpose">Site Purpose</h2>
+            <p>
+                Provide easy meal ideas, quick nutrition tips, and simple planning tools that help busy households
+                eat well on a budget. Content includes a home page highlights feed, a recipes gallery with filters,
+                a 7-day meal planner template, and a “basics” section explaining key nutrients in plain language.
+            </p>
+            <!-- 🔧 TODO: Personalize this paragraph to your exact angle if needed -->
+        </section>
+
+        <!-- Scenarios -->
+        <section aria-labelledby="scenarios">
+            <h2 id="scenarios">Scenarios (User Questions)</h2>
+            <ul class="bullets">
+                <li>“How can I plan a week of dinners under $50?”</li>
+                <li>“Which quick snacks are high in iron for kids?”</li>
+                <li>“Can I get a printable meal plan and grocery list?”</li>
+                <li>“What’s the difference between ‘mg’ and ‘mcg’ on labels?”</li>
+                <!-- Minimum 2 required; more is fine -->
+            </ul>
+        </section>
+
+        <!-- Color Scheme -->
+        <section aria-labelledby="colors">
+            <h2 id="colors">Color Scheme</h2>
+            <p>These colors will be used for branding, headings, accents, and UI elements. The plan document below uses
+                them.</p>
+
+            <div class="swatches">
+                <figure class="swatch" style="--c:#0ea5e9">
+                    <figcaption>
+                        <strong>Primary</strong> – Sky 500<br>
+                        <code>#0EA5E9</code><br>
+                        Usage: brand, links, buttons
+                    </figcaption>
+                </figure>
+
+                <figure class="swatch" style="--c:#16a34a">
+                    <figcaption>
+                        <strong>Accent</strong> – Green 600<br>
+                        <code>#16A34A</code><br>
+                        Usage: success, highlights
+                    </figcaption>
+                </figure>
+
+                <figure class="swatch" style="--c:#0f172a">
+                    <figcaption>
+                        <strong>Text</strong> – Slate 900<br>
+                        <code>#0F172A</code><br>
+                        Usage: body text
+                    </figcaption>
+                </figure>
+
+                <figure class="swatch" style="--c:#f8fafc; color:#0f172a">
+                    <figcaption>
+                        <strong>Background</strong> – Slate 50<br>
+                        <code>#F8FAFC</code><br>
+                        Usage: page background
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section aria-labelledby="type">
+            <h2 id="type">Typography</h2>
+            <ul class="bullets">
+                <li><strong>Poppins</strong> (700/500) – headings, navigation, callouts</li>
+                <li><strong>Inter</strong> (400/500) – body text, UI labels</li>
+            </ul>
+
+            <div class="type-demo">
+                <h3>H3 – Poppins 700: Headline Example</h3>
+                <p>This is Inter 400 for body copy. Aim for comfortable line length (45–75 chars) and sufficient
+                    contrast.</p>
+            </div>
+        </section>
+
+        <!-- Information Architecture (optional but helpful) -->
+        <section aria-labelledby="ia">
+            <h2 id="ia">Planned Pages & Key Sections</h2>
+            <ul class="bullets cols-2">
+                <li>Home (highlights, CTA)</li>
+                <li>Recipes (filter by time/cost)</li>
+                <li>Meal Planner (7-day template)</li>
+                <li>Nutrition Basics (micronutrients)</li>
+                <li>About / Contact</li>
+            </ul>
+        </section>
+
+        <!-- Wireframes -->
+        <section aria-labelledby="wireframes">
+            <h2 id="wireframes">Wireframes</h2>
+
+            <div class="wireframes">
+                <figure>
+                    <figcaption>Mobile (small view)</figcaption>
+                    <div class="wireframe mobile" aria-hidden="true">
+                        <div class="wf header">Logo / Nav</div>
+                        <div class="wf hero">Hero / CTA</div>
+                        <div class="wf cards">3–6 Feature Cards</div>
+                        <div class="wf section">Newsletter / Tip</div>
+                        <div class="wf footer">Footer</div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <figcaption>Desktop (wide view)</figcaption>
+                    <div class="wireframe desktop" aria-hidden="true">
+                        <div class="wf header">Logo • Nav</div>
+                        <div class="wf hero">Hero / CTA</div>
+                        <div class="wf grid">
+                            <div class="cell">Card</div>
+                            <div class="cell">Card</div>
+                            <div class="cell">Card</div>
+                            <div class="cell">Card</div>
+                            <div class="cell">Card</div>
+                            <div class="cell">Card</div>
+                        </div>
+                        <div class="wf section">Newsletter / Tip</div>
+                        <div class="wf footer">Footer</div>
+                    </div>
+                </figure>
+            </div>
+
+            <!-- 🔧 If you prefer hand sketches, scan/photograph and add <img> tags here instead. -->
+        </section>
+
+        <!-- Validation / Self-check (nice to include) -->
+        <section aria-labelledby="checks">
+            <h2 id="checks">Self-Check & Validation</h2>
+            <ul class="bullets">
+                <li>HTML & CSS validated via W3C tools.</li>
+                <li>DevTools Lighthouse ≥ 90 for A11y / Best Practices / SEO (desktop & mobile).</li>
+                <li>Color contrast checked (AA or better).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> • Site plan by <strong>Lilian Anyanwu</strong></p>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+
+</html>
