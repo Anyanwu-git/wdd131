@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Review • WDD131</title>
+    <link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Product Review</h1>
+        <p class="tagline">Please review a product you've installed.</p>
+    </header>
+
+    <!-- method must be GET, action must point to review.html -->
+    <main>
+        <form id="reviewForm" method="get" action="review.html" novalidate>
+            <!-- Product Name -->
+            <fieldset>
+                <legend>Product</legend>
+                <label for="productName">Product Name *</label>
+                <select id="productName" name="product" required>
+                    <option value="" disabled selected>Select a Product …</option>
+                    <!-- options are injected by scripts/form.js -->
+                </select>
+            </fieldset>
+
+            <!-- Overall Rating: radios share the SAME 'name' so only one can be chosen -->
+            <fieldset>
+                <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+                <div class="rating">
+                    <input type="radio" id="rating5" name="rating" value="5" required />
+                    <label for="rating5" aria-label="5 stars">★★★★★</label>
+
+                    <input type="radio" id="rating4" name="rating" value="4" />
+                    <label for="rating4" aria-label="4 stars">★★★★☆</label>
+
+                    <input type="radio" id="rating3" name="rating" value="3" />
+                    <label for="rating3" aria-label="3 stars">★★★☆☆</label>
+
+                    <input type="radio" id="rating2" name="rating" value="2" />
+                    <label for="rating2" aria-label="2 stars">★★☆☆☆</label>
+
+                    <input type="radio" id="rating1" name="rating" value="1" />
+                    <label for="rating1" aria-label="1 star">★☆☆☆☆</label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <fieldset>
+                <legend>Installation</legend>
+                <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
+                <input type="date" id="installDate" name="installDate" required />
+            </fieldset>
+
+            <!-- Useful Features: check all that apply -->
+            <fieldset>
+                <legend>Useful Features</legend>
+                <div class="checks">
+                    <label><input type="checkbox" id="featDurability" name="features" value="Durability" />
+                        Durability</label>
+                    <label><input type="checkbox" id="featEase" name="features" value="Ease of Use" /> Ease of
+                        Use</label>
+                    <label><input type="checkbox" id="featPerformance" name="features" value="Performance" />
+                        Performance</label>
+                    <label><input type="checkbox" id="featDesign" name="features" value="Design" /> Design</label>
+                    <label><input type="checkbox" id="featValue" name="features" value="Value" /> Value</label>
+                    <label><input type="checkbox" id="featSupport" name="features" value="Customer Support" /> Customer
+                        Support</label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review (optional) -->
+            <fieldset>
+                <legend>Written Review (optional)</legend>
+                <label for="reviewText" class="sr-only">Your review</label>
+                <textarea id="reviewText" name="review" rows="5" placeholder="Share your experience…"></textarea>
+            </fieldset>
+
+            <!-- User Name (optional) -->
+            <fieldset>
+                <legend>Your Review</legend>
+                <label for="about" class="sr-only">About You (optional)</label>
+                <input type="text" id="about" name="about" placeholder="About you (optional)" />
+
+                <label for="userName">Your Name</label>
+                <input type="text" id="userName" name="user" placeholder="Your Name" />
+            </fieldset>
+
+            <p class="hint">* Required</p>
+            <input type="submit" value="Submit Review" class="btn" />
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> • WDD 131</p>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</body>
+
+</html>

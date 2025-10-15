@@ -1,40 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Review Submitted • WDD 131</title>
+    <title>Thank you!</title>
     <link rel="stylesheet" href="styles/form.css" />
 </head>
 
 <body>
     <header class="site-header">
         <h1>Thank you!</h1>
-        <p class="tagline">Your review was submitted successfully.</p>
+        <p>Your review was submitted successfully.</p>
     </header>
 
     <main>
-        <section class="card">
+        <section>
             <h2>Submission Details</h2>
-            <dl id="details"></dl>
+            <ul id="details"></ul>
         </section>
 
-        <section class="card">
+        <section>
             <h2>Your Review Counter</h2>
-            <p>You have submitted <strong id="reviewCount">0</strong> review(s) on this device.</p>
+            <p>You have submitted <strong id="counter">0</strong> review(s) on this device.</p>
+            <p><a href="form.html">Submit another review</a></p>
         </section>
-
-        <p><a class="btn" href="form.html">Submit another review</a></p>
     </main>
 
     <footer class="site-footer">
         <p>&copy; <span id="year"></span> • WDD 131</p>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <script src="scripts/review.js" defer></script>
 </body>
 
