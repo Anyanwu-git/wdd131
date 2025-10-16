@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Review submission confirmation for WDD131." />
+    <title>Thank you • WDD131</title>
+    <link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Thank you!</h1>
+        <p>Your review was submitted successfully.</p>
+
+        <section>
+            <h2>Submission Details</h2>
+            <!-- Optional: echo back selected fields from the query string -->
+            <div id="details"></div>
+        </section>
+
+        <section>
+            <h2>Your Review Counter</h2>
+            <p>You have submitted <strong id="count">0</strong> review(s) on this device.</p>
+            <p><a href="form.html">Submit another review</a></p>
+        </section>
+    </main>
+
+    <script>
+        // Increment counter on successful load
+        const KEY = "reviewCount";
+        const current = Number(localStorage.getItem(KEY) || "0") + 1;
+        localStorage.setItem(KEY, String(current));
+        document.getElementById("count").textContent = current;
+
+        // (Optional) show a couple of submitted values for confirmation
+        const params = new URLSearchParams(location.search);
+        const picked = ["product", "rating", "installDate"];
+        const ul = document.createElement("ul");
+        picked.forEach(k => {
+            if (params.has(k)) {
+                const li = document.createElement("li");
+                li.textContent = `${k}: ${params.get(k)}`;
+                ul.appendChild(li);
+            }
+        });
+        document.getElementById("details").appendChild(ul);
+    </script>
+</body>
+
+</html>

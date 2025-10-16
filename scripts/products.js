@@ -1,8 +1,7 @@
 // scripts/products.js
-// expose on window so other scripts can read it
-window.products = [
-    { id: "fc-1888", name: "Flux Capacitor" },
-    { id: "tt-1985", name: "Time Turner" },
-    { id: "hb-3000", name: "Hover Board" },
-    { id: "ps-9000", name: "Photon Shield" }
+export const products = [
+    { id: "wd-100", name: "Widget Deluxe" },
+    { id: "sb-200", name: "Smart Bolt 200" },
+    { id: "lt-300", name: "LiteTrack 300" },
+    { id: "mx-400", name: "MaxSeal 400" }
 ];
