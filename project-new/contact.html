@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact My Study Hub" />
+    <title>Contact • My Study Hub</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="images/logo.svg" alt="" width="36" height="36" /><span>My Study
+                Hub</span></a>
+        <button id="menuBtn" class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav id="siteNav" class="site-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+            <button id="themeBtn" class="theme-btn" aria-pressed="false" title="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact</h1>
+
+        <!-- Form uses GET so it works on GitHub Pages, action shows a simple thank-you screen -->
+        <form class="contact-form" method="get" action="contact.html#thanks">
+            <label> Your Name <input name="name" required /></label>
+            <label> Email <input name="email" type="email" required /></label>
+            <label> Message <textarea name="message" rows="6" required></textarea></label>
+            <button class="btn" type="submit">Send</button>
+        </form>
+
+        <div id="thanks" class="thanks" hidden role="status" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> • My Study Hub</p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>

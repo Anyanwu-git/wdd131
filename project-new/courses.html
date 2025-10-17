@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Filter and explore courses by level and category." />
+    <title>Courses • My Study Hub</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <!-- shared header -->
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="images/logo.svg" alt="" width="36" height="36" /><span>My Study
+                Hub</span></a>
+        <button id="menuBtn" class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav id="siteNav" class="site-nav" aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="courses.html" aria-current="page">Courses</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeBtn" class="theme-btn" aria-pressed="false" title="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Courses</h1>
+
+        <form id="filters" class="filters" aria-label="Course filters">
+            <label>
+                Level
+                <select id="levelSelect" name="level">
+                    <option value="all">All</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </label>
+
+            <label>
+                Search
+                <input id="searchBox" name="q" type="search" placeholder="Search by title…" />
+            </label>
+
+            <button type="button" id="clearBtn" class="btn btn--ghost">Clear</button>
+        </form>
+
+        <div id="courseList" class="grid"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> • My Study Hub</p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>

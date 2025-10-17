@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Study Hub — resources, courses and tips for learners." />
+    <title>My Study Hub • Home</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <!-- header/nav -->
+    <header class="site-header">
+        <a class="brand" href="index.html"><img src="images/logo.svg" alt="" width="36" height="36" /><span>My Study
+                Hub</span></a>
+        <button id="menuBtn" class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav id="siteNav" class="site-nav" aria-label="Main">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeBtn" class="theme-btn" aria-pressed="false" title="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <!-- lazy image = loading="lazy" meets “lazy loading” rubric -->
+                <img src="images/study-pic.jpg" alt="Students studying" loading="lazy" width="1280" height="720">
+            </picture>
+            <div class="hero__text">
+                <h1>Learn faster, stay organized</h1>
+                <p>Browse curated courses, filter by level, and build your study checklist.</p>
+                <a class="btn" href="courses.html">Browse Courses</a>
+            </div>
+        </section>
+
+        <section class="cards">
+            <h2>Popular Topics</h2>
+            <!-- JS will render “cards” from an array using template literals -->
+            <div id="topicGrid" class="grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> • My Study Hub</p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>
